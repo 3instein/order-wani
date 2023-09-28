@@ -18,7 +18,7 @@ const Menu: FC = () => {
         <>
             <div className="tabs my-5">
                 <Link
-                    href="/foods"
+                    href="/"
                     className={`tab md:tab-md lg:tab-lg tab-bordered ${activeTab === 0 ? 'tab-active' : ''}`}
                     onClick={() => handleTabClick(0)}
                 >
