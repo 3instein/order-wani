@@ -19,14 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="light">
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} max-h-screen`}>
         <div className="grid grid-cols-12">
-          <div className="col-span-12 lg:col-span-9 p-5">
+          <div className="col-span-12 md:col-span-7 lg:col-span-8 xl:col-span-9 p-5">
             <SearchBar />
             <Menu />
             {children}
           </div>
-          <div className="hidden lg:col-span-3 lg:block bg-slate-100 min-h-screen">
+          <div className="hidden md:col-span-5 lg:col-span-4 xl:col-span-3 md:block">
             <Cart />
           </div>
         </div>

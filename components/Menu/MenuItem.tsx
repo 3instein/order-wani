@@ -1,10 +1,12 @@
 import { FC } from "react";
+import AyamGeprek from "public/assets/ayam-geprek.jpg"
+import Image from "next/image";
 
 const MenuItem: FC = () => {
     return (
-        <div className="card w-96 md:w-60 lg:w-80 mx-auto md:mx-0 bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer transition-transform transform-gpu hover:scale-105">
+        <div className="card md:w-48 lg:w-52 xl:w-72 2xl:w-96 mx-auto md:mx-0 bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer transition-transform transform-gpu hover:scale-105">
             <figure className="relative">
-                <img src="assets/ayam-geprek.jpg" alt="Shoes" />
+                <Image src={AyamGeprek} alt="Shoes" />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">Ayam Geprek</h2>
