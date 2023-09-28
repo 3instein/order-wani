@@ -1,6 +1,9 @@
-import './globals.css'
+import '@/app/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { SearchBar } from '@/components/SearchBar'
+import { Menu } from '@/components/Menu/Menu'
+import { Cart } from '@/components/Cart/Cart'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +19,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="light">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className}`}>
+        <div className="grid grid-cols-12">
+          <div className="col-span-12 lg:col-span-9 p-5">
+            <SearchBar />
+            <Menu />
+            {children}
+          </div>
+          <div className="hidden lg:col-span-3 lg:block bg-slate-100 min-h-screen">
+            <Cart />
+          </div>
+        </div>
+      </body>
     </html>
   )
 }
