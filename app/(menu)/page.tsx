@@ -3,11 +3,13 @@ import { MenuItem } from "@/components/Menu/MenuItem"
 import { Menu } from "@/interfaces/Menu"
 import axios from "axios"
 
-const data: Menu[] = [
+const menus: Menu[] = [
     {
+        id: 1,
         name: "Ayam Geprek",
-        price: 10000
-    }
+        price: 10000,
+        type: 'food'
+    },
 ]
 
 async function getMenus() {
@@ -20,7 +22,7 @@ async function getMenus() {
 
 const Foods: FC = async () => {
 
-    const menus: Menu[] = await getMenus()
+    // const menus: Menu[] = await getMenus()
 
     return (
         <>
@@ -34,7 +36,7 @@ const Foods: FC = async () => {
                     (
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 gap-y-8">
                             {
-                                menus.map((menu, index) => (
+                                menus.filter(menu => menu.type === 'food').map((menu, index) => (
                                     <MenuItem key={index} menu={menu} />
                                 ))
                             }
