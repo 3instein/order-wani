@@ -22,7 +22,7 @@ async function getMenus() {
 
 const Foods: FC = async () => {
 
-    // const menus: Menu[] = await getMenus()
+    const menus: Menu[] = await getMenus()
 
     return (
         <>

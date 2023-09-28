@@ -1,6 +1,6 @@
 'use client'
 
-import { FC, useState } from 'react'
+import { FC, useState, useEffect } from 'react';
 import { FaBowlFood } from 'react-icons/fa6'
 import { MdLocalDrink } from 'react-icons/md'
 import { CiFries } from 'react-icons/ci'
